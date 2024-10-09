@@ -1,5 +1,6 @@
 import sys
 from coin_initialization import CoinInitialization
+from input_coin_initialization import InputCoinInitialization
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (   
@@ -66,7 +67,8 @@ class MainWindow(QMainWindow):
 app = QApplication(sys.argv)
 w = MainWindow()
 coin_initialization = CoinInitialization()
+input_coin_initialization = InputCoinInitialization(0, 0, coin_initialization)
 coin_initialization.insert_coin()
-print(coin_initialization)
+print(input_coin_initialization)
 
 app.exec()
