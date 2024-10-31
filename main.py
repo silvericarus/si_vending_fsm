@@ -3,6 +3,7 @@ from coin_initialization import CoinInitialization
 from input_coin_initialization import InputCoinInitialization
 from coin_bank import CoinBank
 from assortment import Assortment
+from clock import Clock
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (   
@@ -68,6 +69,7 @@ class MainWindow(QMainWindow):
 
 app = QApplication(sys.argv)
 w = MainWindow()
+clock = Clock()
 coin_initialization = CoinInitialization()
 input_coin_initialization = InputCoinInitialization(0, 0, coin_initialization)
 coin_bank = CoinBank()
